@@ -5,7 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: './',
+  base: '/',
   server: {
     host: "::",
     port: 8080,
@@ -22,9 +22,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     sourcemap: true,
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, './index.html')
-      },
+      input: path.resolve(__dirname, 'index.html'),
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
