@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => ({
     sourcemap: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html')
+        main: path.resolve(__dirname, './index.html')
       },
       output: {
         manualChunks: {
