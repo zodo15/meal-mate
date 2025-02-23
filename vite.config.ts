@@ -23,7 +23,12 @@ export default defineConfig(({ mode }) => ({
     sourcemap: true,
     outDir: 'dist',
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'),
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      },
+      external: [
+        '/src/main.tsx'
+      ],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
