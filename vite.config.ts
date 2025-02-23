@@ -24,9 +24,9 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html')
+        main: path.resolve(__dirname, 'index.html'),
+        entry: path.resolve(__dirname, 'src/main.tsx')
       },
-
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
