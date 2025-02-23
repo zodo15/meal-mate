@@ -26,9 +26,7 @@ export default defineConfig(({ mode }) => ({
       input: {
         main: path.resolve(__dirname, 'index.html')
       },
-      external: [
-        '/src/main.tsx'
-      ],
+
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
